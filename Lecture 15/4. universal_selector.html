@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+/* ache codes ke andar margin and padding ko universal selector ke andar by default 0 mark kiya jata hai 
+by using universal selector we can ensure that this property(setting margin and padding as 0 by default) will be applied on all the elements*/
+        
+        /* Universal Selector  */
+        *{
+            /* this properties will be applied on all the elements */
+            padding: 0;
+            margin: 0;
+            /* this is a best practice */
+        }
+
+
+        .firstPara{
+            background-color: blanchedalmond;
+            border: solid black 3px;
+            border-radius: 5px;
+            width: 350px;
+
+        }
+
+        .secondPara{
+            background-color: beige;
+            border: solid black 3px;
+            border-radius: 5px;
+            width: 350px;
+        }
+
+        .thirdPara{
+            background-color: yellow;
+            border: solid black 3px;
+            border-radius: 5px;
+            width: 350px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <p class="firstPara">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis nam eligendi quod esse mollitia officia, ducimus illum. Corporis, nisi quis aut ipsam odit aperiam atque ipsa quo autem repudiandae hic. Repellat similique distinctio atque. Iste dignissimos amet commodi modi.
+    </p>
+
+    <p class="secondPara">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nihil architecto cum delectus, eveniet fugiat expedita consequuntur tenetur, qui earum quos commodi incidunt libero id voluptas quasi inventore in quisquam corporis. Error asperiores eum fugiat enim praesentium nulla consequuntur odio veniam beatae, magnam, nihil natus. Magnam, vero molestiae! Modi, eligendi!
+    </p>
+
+    <p class="thirdPara">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit ducimus, nostrum quisquam eum repellat esse in, eligendi aliquid quo quis facilis voluptas molestiae omnis dolorem.
+    </p>
+
+    </body>
+</html>

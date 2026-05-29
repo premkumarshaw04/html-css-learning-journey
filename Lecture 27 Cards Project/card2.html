@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            /* what is vw? vw is a unit of measurement in CSS that stands for "viewport width". It represents a percentage of the width of the viewport, which is the visible area of a web page. For example, if you set an element's width to 50vw, it will take up 50% of the viewport's width.
+            This allows for responsive design, as elements can adjust their size based on the size of the viewport. Similarly, vh stands for "viewport height" and represents a percentage of the height of the viewport. */
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            width: 400px;
+            height: 600px;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .card img{
+            width: 100%; /*iske parent ki width ka 100% hoga, isliye width 100% di hai*/
+            height: 30%; /*iske parent ki height ka 30% hoga, isliye height 30% di hai*/
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .textBox{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+        }
+        #amountBox{
+            width: 80%;
+            height: 10%;
+            background-color: rgb(123, 167, 217);
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        #leftBox{
+            width: fit-content;
+            display: flex;
+            gap: 15px;
+            /* image box and text amount box me 15px ka gap hoga  */
+
+            height: 100%;
+            align-items: center;
+        }
+        .imgBox{
+            width: 3.5rem;
+            height: 3.5rem;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .rightBox a{
+            text-decoration: none; /*Isse underline remove ho jati hai*/
+            color: rgb(37, 35, 35);
+            font-weight: bold;
+        }
+        #paymentButton{
+            width: 80%;
+            height: 10%;
+            background-color: rgb(6, 33, 63);
+            border-radius: 10px;
+            color: white;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+        .cancelBox a{
+            text-decoration: none; /*Isse underline remove ho jati hai*/
+            color: rgb(37, 35, 35);
+            font-weight: bold;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- hme iske andar ek card chahiye  -->
+        <div class="card">
+            <!-- first item  -->
+            <img src="images/AI.jpeg" alt="">   
+            
+            <div class="textBox">
+                <!-- second item  (heading)-->
+                <h2>Order Summary</h2>
+
+                <!-- third item  (paragraph)-->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsam sapiente impedit est obcaecati quo deleniti numquam modi, dolorem officia?</p>
+            </div>
+            
+            <div id="amountBox">
+                <!-- iske andar 2 boxes aayenge  -->
+
+                <div id="leftBox">
+                    <!-- iske andar 2 boxes aayenge  -->
+
+                    <!-- first : Image Box  -->
+                    <div class="imgBox">
+                        <img src="images/musicIcon.png" alt="">
+                    </div>
+
+                    <!-- Second : Text Amount Box -->
+                    <div class="textAmountBox">
+                        <p>Amount</p>
+                        <p>$99.9/year</p>
+                    </div>
+
+                </div>
+
+                <div class="rightBox">
+                    <a href="#">Change</a>
+                </div>
+            </div>
+
+            <button id="paymentButton">
+                Proceed to Payment
+            </button>
+
+            <div class="cancelBox">
+                <a href="#">Cancel Order</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

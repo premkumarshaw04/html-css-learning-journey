@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Two</title>
+</head>
+<body>
+    <h2>Job Application</h2>
+    
+    <form>
+        <label for="name">Name:</label>
+        <br/>
+        <input type="text" name="name" id="name">
+        <br/>
+        
+        <label for="emailId">Email ID:</label>
+        <br/>
+        <input type="email" name="emailId" id="emailId">
+        <br/>
+        
+        <label for="phoneNo">Phone:</label>
+        <br/>
+        <input type="phoneNo" name="phoneNo" id="phoneNo">
+        <br/>
+        
+        <label for="resume">Resume:</label>
+        <br/>
+        <input type="file" name="resume" id="resume">
+        <br/>
+
+        <!-- Creating Counter
+        range will be 0 to 50 -->
+        <label for="counter">Experience(in years):</label>
+        <input type="number" name="counter" id="counter" min="0" max="50">
+        <br/>
+        <br/>
+        <fieldset>
+            <legend>Skills</legend>
+            <input type="checkbox" name="checkbox1" id="checkbox1">
+            <br/>
+            <label for="checkbox1">HTML</label>
+            <br/>
+            <input type="checkbox" name="checkbox2" id="checkbox2">
+            <br/>
+            <label for="checkbox2">CSS</label>
+            <br/>
+            <input type="checkbox" name="checkbox3" id="checkbox3">
+            <br/>
+            <label for="checkbox2">JavaScript</label>
+        </fieldset>
+
+        <label for="higherEdu">Highest Education:</label>
+        <br/>
+        <select name="higherEdu" id="higherEdu">
+            <option value="highSchool">High School</option>
+            <option value="associateDegree">Associate's Degree</option>
+            <option value="batchelorDegree">Batchelor's Degree</option>
+            <option value="associateDegree">Associate's Degree</option>
+            <option value="masterDegree">Master's Degree</option>
+            <option value="phd">PHD</option>
+        </select>
+        <br/>
+        <br/>
+        <fieldset>
+            <legend>Availibility:</legend>
+
+            <input type="radio" name="radio" id="workingHours">
+            <!-- name or type attribute ko equal karne se at a time ek hi selection kar sakte hai--
+            at a time ek hi item select karne ke liye name or type attribute ko eqaul kar de -->
+            <label for="workingHours">Full-time</label>
+
+            <input type="radio" name="radio" id="workingHours">
+            <label for="workingHours">Part-time</label>
+        </fieldset>
+        
+        <label for="text1">Additional Comments:</label>
+        <br/>
+        <textarea name="text1" id="text1" cols="30" rows="5"></textarea>
+
+        <input type="submit" value="Submit Application">
+        
+
+    </form>
+</body>
+</html>

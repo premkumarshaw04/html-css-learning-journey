@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Second Example</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color: rgb(81, 67, 67);
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 200px);
+            gap: 0.4rem;
+            padding: 4rem;
+            border: 5px solid white;
+        }
+
+        .item{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(57, 191, 53);
+            border: 5px solid rgb(238, 244, 246);
+
+            /* justify-self will be applied in horizontal axis  */
+
+            /* justify-self: end; isse sare items (right most) end me place ho jayenge */
+            /* justify-self: start; || items start me place ho jayenge */
+            /* justify-self: center; || Sare items centre me place ho jaynege */
+            /* justify-self: stretch; || isee sare item left se right stretch ho jayenge , if height and width is not assigned*/
+
+
+            /* align-self will be used in verticle axis  */
+
+            /* align-self: start; */
+            /* align-self: end; |Sare item cell ke bottom most point par aa jayenge */
+            /* align-self: center;   | verticle axis me cell ke andar centre me aa jayega*/
+            /* align-self: stretch; verticle axis ke corresponding stretch ho jayega */
+
+            place-self: center; /*isse vertical and horizontal dono axis ke according centre me place ho jayega*/
+        }   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+    </div>
+</body>
+</html>

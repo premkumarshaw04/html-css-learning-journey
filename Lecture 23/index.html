@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations ka Gyaan</title>
+    <style>
+        *{   /*Universal selector */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;/*box sizing border box is used to remove overflow*/
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: beige;
+            border: 5px solid black;
+        }
+        .box{
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border: 2px solid red;
+            position: absolute;
+            border-radius: 10px;
+
+            position: relative;/* By this we can use top, left, right, bottom. || relative position is used to move the element from its original position*/
+            
+            /* creating Animation in box  */
+            animation-name: rightMovement;
+
+            animation-duration: 5s; /*animation duration is used to set the time of animation */
+            animation-iteration-count: 1; /*animation iteration count is used to set the number of times the animation should be played. || infinite is used to play the animation infinite times */
+            /* animation-delay: 2s; || animation delay is used to set the time before the animation starts. */
+            
+            animation-timing-function: linear; /*animation timing function is used to set the speed of the animation. || linear is used to set the animation speed to constant.*/
+            /* animation-timing-function: ease-in-out; || ease-in-out is used to set the animation speed to slow at the beginning and end, and fast in the middle. */
+            /* animation-timing-function: ease-in; || ease-in is used to set the animation speed to slow at the beginning and fast at the end. */
+            /* animation-timing-function: cubic-bezier(0.1,0.7,1.0,0.1);cubic-bezier is used to set the animation speed to custom. || cubic-bezier(0.1,0.7,1.0,0.1) is used to set the animation speed to slow at the beginning and end, and fast in the middle. */
+            
+            /* animation-direction: alternate; || animation direction is used to set the direction of the animation. || alternate is used to play the animation in reverse on every alternate cycle. */
+            /* animation-direction: reverse; || reverse is used to play the animation in reverse(destination to source). */
+            
+            animation-fill-mode: forwards; /*||animation fill mode is used to set the style of the element after the animation ends. || forwards is used to keep the style of the element at the end of the animation.*/
+            /* animation-fill-mode: backwards; || backwards is used to apply the style of the element*/
+            /* animation-fill-mode: both; both is used to apply the style of the element at both the beginning and end of the animation.  */
+
+        }
+        @keyframes rightMovement {
+            /*rightMovement ki configuration ki sari details is keyframe me hogi*/
+            
+            from{ /*Sorce*/
+                top: 0px;
+                left: 0px;
+            }
+            to{ /*Destination*/
+                top: 0px;
+                left: 1250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animation: jab koi element ek style se dusre style mein change hota hai, toh usko animation kehte hai. 
+    keyframes are used to define the intermediate steps in CSS animations.  -->
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+</html>

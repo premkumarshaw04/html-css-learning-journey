@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    max-width: 66vw;
+    padding: 2rem 1rem; /*top and bottom se 2rem and left and right se 1rem*/
+    margin: 0 auto; /*top and bottom are 0, left and right are auto to center the container*/
+}
+
+a{
+    text-decoration: none; /*isse underline nhi aayega, hyperlinks ke niche*/
+}
+
+.header_container{
+    margin-bottom: 2.8rem;
+}
+.header_title{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    line-height: 2rem; /*line-height defines the vertical spacing between lines of text to improve readability.*/
+    font-weight: 700;
+    text-align: center;
+}
+
+.header_description{
+    font-size: 1.2rem;
+    max-width: 568px;
+    text-align: center;
+    color: rgb(76, 74, 74);
+    margin: 0 auto;
+}
+
+/* ------------------------------------------------------ */
+/*main_container ek grid hai jiske andar cards aayenge*/
+.main_container{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);/*Normal case me hme single co;umn chahiye*/
+}
+
+/* sight ko responsive banana hoga, jaise jaise hm resolution ko kam karte jayenge waise waise no of columns decrese hote jayega */
+@media (min-width: 935px){
+    .main_container{
+        grid-template-columns: repeat(2, 1fr);/*935px me hme 2 columns chahiye*/
+    }
+}
+
+/* 1380px hone pe hme 3 columns chahiye */
+@media (min-width: 1380px){
+    .main_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 1600px hone pe hme 3 columns chahiye */
+@media (min-width: 1600px){
+    .main_container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+/* ------------------------------------------------------ */
+
+
+.card_container{
+    /* isme sare entities ek ke niche ek hai  */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(183, 173, 173);
+    border-radius: 8px;
+    overflow: hidden; /*isse card ke andar ke content ko card ke bahar nhi jane dega, agar content card ke size se bada hoga to wo cut ho jayega */
+}
+
+/* ------------------------------------------------------ */
+.card_image_container{
+    position: relative;/* mai chahta hu iss card_image_container ke andar image aaye  */
+    overflow: hidden;
+    height: 7rem; /*jab screen size 768px se kam hoga tab image ki size 7rem rhegi*/
+}
+
+/*and jab resolution 768px ya usse jyada hoga, then image ki height 12rem hogi*/
+
+@media (min-width: 768px){
+    .card_image_container{
+        height: 12rem;
+    }
+}
+/* ------------------------------------------------------ */
+
+.card_image{
+    object-fit: cover; /*isse image apne container ke andar fit ho jayegi, bina aspect ratio ko todhe */
+    object-position: center; /*isse image apne container ke center me position ho jayegi */
+    position: absolute; /*isse image apne container ke andar absolute position me aa jayegi */
+    height: 100%;
+    width: 100%;
+}
+
+.card_title_container{
+    /* isme dono entities ek ke niche ek hai  */
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+     
+}
+
+/* card container par hover karne se image scale kartni chahiye  */
+.card_container:hover .card_image{
+    transform: scale(1.1); /*isse image thodi badi ho jayegi jab hover karenge */
+    transition-duration: 200ms;
+}
+
+.card_title{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-bottom: 0.4rem;
+    color: rgb(25, 23, 23);
+}
+
+/*jab bhi mai card title par hover karunga to uske andar ke anchor tag ka color change hona chahiye  */
+.card_title_anchor:hover .card_title{
+    color: rgb(44, 44, 173);
+} 
+
+.card_description{
+    color: rgb(68, 66, 66);
+    font-size: 1rem;
+}
+
+
+/* lets design the footer container  */
+.card_foooter_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 1.5rem; /*top and bottom se 0 aur left and right se 1.5rem*/
+    padding-bottom: 1.5rem;
+}
+
+.author_container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author_avatar_container{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgb(140, 138, 138);
+    border-radius: 50%; /*isse border circular way me banega*/
+    background-color: rgb(244, 240, 240);
+}
+
+.author_info_conatiner{
+    display: flex;
+    flex-direction: column;
+}
+
+.author_name{
+    color: rgb(58, 58, 170);
+}
+
+.author_date{
+    color: rgb(107, 103, 103);
+}
+
+.card_tag_conatiner{
+    font-size: 0.9rem;
+    border: 1px solid rgb(110, 98, 98);
+    border-radius: 2px;
+    line-height: 1rem;
+    padding: 0.5rem 0.5rem; /*top bottom, Left right*/
+    color: rgb(87, 80, 80);
+    padding: 1.5remn;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+

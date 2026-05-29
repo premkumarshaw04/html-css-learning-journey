@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* universal selector  */
+        *{
+            margin: 0px;
+            padding: 0px;
+            /* this is the best practice */
+        }
+
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 100px;
+            /* jab bhi hm (box-sizing: border box) apply nhi karte hai, and hm padding margin add karte hai to hmara box ka size impact ho jata hai 
+            sari properties ki size add hoti jati hai  */
+
+            /* yaha hm box sizing border box apply nhi kiya hai jisse sare properties lagne ke baad size increase hua hai */
+        }
+
+        /* Applying box sizing border box on sevond div element having class box2  */
+        .box2{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 100px;
+
+            box-sizing: border-box;
+            /* But agar gm (box sizing border box) mention kar dete hai, to hmara box ka actual 
+            dimmensions me kabhi change nhi aayenge, instead hmara content shrink ho jayega*/
+
+            /* (box sizing border box) apply karne se element apna actual size retain karta hai, expend karne ke jagah uska content shrink ho jata hai */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box1">
+        Welcome to code help
+    </div>
+
+    <div class="box2">
+        Welcome to code help 2.0
+    </div>
+</body>
+</html>

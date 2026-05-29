@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>/*Internal CSS*/
+
+        *{
+            margin: 10px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .span1{
+            border: 2px solid green;
+            /* span is inline element so below listed properties will no be applied */
+            width: 800px;
+            height: 400px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        /* both the span element will come in same line beacause after applying diplay inline_block property it will behave
+        like inline(it is still inline element) but we can add our custom width and height */
+
+        .span2{
+            border: 2px solid green;
+            /* span is inline element so below listed properties will no be applied */
+            width: 800px;
+            height: 400px;
+            margin: 10px;
+            padding: 10px;
+
+            display: inline-block;
+            /* But by adding inline-block property it will beahave like inline but we can add our custom width and height */
+        }
+    </style>
+
+</head>
+<body>
+    <span class="span1">
+        this is Love Babbar
+    </span>
+
+    <span class="span2">
+        this is Love Babbar 2.0
+    </span>
+
+</body>
+</html>

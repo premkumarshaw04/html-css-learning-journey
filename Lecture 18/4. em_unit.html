@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* Talking about em(unit) */
+        .wrapper {
+            font-size: 1em;
+            /* jo bhi wrapper ka current parent hoga which is body, jiski usually default font size ki length 16px hoti hai
+             so 1 em = 16px*/
+        }
+
+        .px {
+        width: 200px;
+        }
+
+        .vw {
+        width: 10vw;
+        }
+
+        .em {
+        width: 10em;
+        /* 1em = 16px */
+        /* 10em = 160px */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box px">I am 200px wide</div>
+        <div class="box vw">I am 10vw wide</div>
+        <div class="box em">I am 10em wide</div>
+    </div>
+
+</body>
+</html>

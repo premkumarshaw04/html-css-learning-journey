@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .box{ /*Normal/Default state*/
+            width: 400px;
+            height: 400px;
+            background-color: beige;
+            border: 2px solid black;
+
+            /* Applying transitions  */
+            /* transition-property: width; It specifies the name of the CSS property to which the transition is applied. */
+            transition-property: all; /* It applies the transition effect to all properties that change. */
+            transition-duration: 4s;
+            transition-delay: 1s;
+            transition-timing-function: linear; /* It specifies the speed curve of the transition effect. */
+        }
+
+        /*To see the transition effect, we need to hover over the element. Or we can use the pseudo-classes like hover and active*/
+        /* normally mere box ki width 400px hai, but when I hover over it, the width will change to 1800px. */
+        .box:hover{ /*Pseudo class*/
+            /* property hmne width pe apply ki hai, usko change krna hoga. */
+            width: 1800px;
+            height: 900px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- /*What is Transition? It is a CSS property that allows you to control the speed of an element's transition from one state to another. */
+    /*Transitions are used to define the transition effect between two states of an element. */
+
+    /*Difference between Transitions and Animations*/
+    /*Transition is a single switch between two states of an element, while Animation is a continuous movement of an element. */
+    /*Transition is the child entity of Animations. */
+    /*Animation are a set of transitions.*/ -->
+
+    <div class="box">
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            /* bare wale container ko flex me convert karna hai, jiske iske andar wale boxes flex items ban jaye; */
+            
+            background-color: beige;
+            border: 5px solid black;
+            margin: 2px;
+            padding: 2px;
+            height: 1200px;
+            
+            display: flex;/* display:flex;  isse boxes ek line me aa jayenge  */
+            /*by default flex-direction: row hota hai, jisme left se right me boxes arrange hote hain */
+            flex-direction: row; /*here flex direction is row, then main axis is horizontal and cross axis is vertical */
+            
+            /* align-items: center; ab boxes container ke center me aa jayenge vertically  */
+             /*It works on cross axis, so it will work vertically in this case because flex direction is row, if flex direction is column then it will work horizontally */   
+            
+            align-items: stretch; /*ab boxes container ke height ke hisab se stretch ho jayenge vertically  */
+             /*It works on cross axis, so it will work vertically in this case because flex direction is row, if flex direction is column then it will work horizontally */
+        }
+
+        /* . is used for class */
+        .box{
+            width: 200px;
+            /* height: 200px; */
+            border: 2px solid brown;
+            margin: 2px;
+            padding: 2px;
+        }
+
+        /* # is used for id  */
+        #box1{ 
+            background-color: aqua;
+        }
+        #box2{
+            background-color: blue;
+        }
+        #box3{
+            background-color: orange;
+        }
+        #box4{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+    </div>
+</body>
+</html>

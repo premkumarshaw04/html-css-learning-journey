@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations ka Gyaan</title>
+    <style>
+        *{   /*Universal selector */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;/*box sizing border box is used to remove overflow*/
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: beige;
+            border: 5px solid black;
+        }
+        .box{
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border: 2px solid red;
+            position: absolute;
+            border-radius: 10px;
+
+            position: relative;/* By this we can use top, left, right, bottom. || relative position is used to move the element from its original position*/
+            
+            /* creating Animation in box  */
+            /*Animation short hand notaion*/
+            /*animation: duration | easing function | delay | iteration count | direction | fill mode | play state | name*/
+            animation: 5s linear 2s infinite alternate none running rightMovement;
+        }
+        @keyframes rightMovement {
+            /*rightMovement ki configuration ki sari details is keyframe me hogi*/
+            
+            from{ /*Sorce*/
+                top: 0px;
+                left: 0px;
+            }
+            to{ /*Destination*/
+                top: 0px;
+                left: 1400px;
+            }
+        }
+
+
+        #box2{
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border: 2px solid red;
+            position: absolute;
+            border-radius: 10px;
+
+            position: relative;;/* By this we can use top, left, right, bottom. || relative position is used to move the element from its original position*/
+            
+            /* creating Animation in box  */
+            /*Animation short hand notaion*/
+            /*animation: duration | easing function | delay | iteration count | direction | fill mode | play state | name*/
+            animation: 5s ease-in 2s infinite alternate none running leftMovement;
+        }
+        @keyframes leftMovement {
+            /*leftMovement  ki configuration ki sari details is keyframe me hogi*/
+            
+            from{ /*Sorce: right bottom corner*/
+                top: 480px;
+                left: 1350px;
+            }
+            to{ /*Destination: left bottom corner*/
+                top: 480px;
+                left: 0px;
+            }
+        }
+
+        #circle{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 3px solid yellow;
+            border-radius: 50px;
+            margin: 10px;
+            position: relative;
+            top: 30%;
+            left: 40%;
+
+            /*shorthand notaion of animation*/
+            /*animation: duration | easing function | delay | iteration count | direction | fill mode | play state | name*/
+            animation: 10s ease-in-out 0s infinite alternate-reverse none running CircleMovement;
+            
+        }
+        @keyframes CircleMovement {
+            /* I need 4 states for circle movement, so we will add four keyframes*/
+            0%{/*It means 0% of Animation, Just start jab ho raha hai tab hme kya karna hai*/
+                /* pehle mujhe mera circle top left me chahiye */
+                top: 1%;
+                left: 5%;
+            }
+            30%{/*30% animation jab complete hogi tab hme ye karna hai*/
+                top: 5%;
+                left: 90%;
+            }
+            60%{
+                top: 70%;
+                left: 10%;
+            }
+            100%{
+                top: 75%;
+                left: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animation: jab koi element ek style se dusre style mein change hota hai, toh usko animation kehte hai. 
+    keyframes are used to define the intermediate steps in CSS animations.  -->
+    <div class="container">
+        <div class="box">
+        </div>
+
+        <div id="circle">
+
+        </div>
+
+        <div id="box2">
+        </div>
+
+        
+    </div>
+</body>
+</html>

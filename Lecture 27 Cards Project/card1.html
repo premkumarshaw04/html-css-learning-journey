@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            /* what is vw? vw is a unit of measurement in CSS that stands for "viewport width". It represents a percentage of the width of the viewport, which is the visible area of a web page. For example, if you set an element's width to 50vw, it will take up 50% of the viewport's width.
+            This allows for responsive design, as elements can adjust their size based on the size of the viewport. Similarly, vh stands for "viewport height" and represents a percentage of the height of the viewport. */
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            width: 330px;
+            height: 550px;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        /* card ke andar jo image hai uski property mention kari hai  */
+        .card img{
+            height: 57%;
+            border-radius: 10px;
+        }
+
+        /* card ke andar jo heading hai uski property mention kari hai  */
+        .card h2{
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .card p{
+            font-size: 1.2em;
+            /* what is em? em is a relative unit of measurement in CSS that is based on the font size of the parent element. 
+            1em is equal to the current font size of the element. For example, if the font size of the parent element is 16px, then 1em would be equal to 16px. 
+            If you set the font size of an element to 1.5em, it would be 1.5 times the font size of its parent element. This allows for scalable and flexible designs, 
+            as the size of elements can adjust based on the font size of their parent elements. */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="card">
+            <!-- card ke andar 3 items honge and wo sare ek ke niche ek honge, so card ki flex direction column kar do-->
+            
+            <!-- first item  -->
+            <img src="images/qrcode.jpg" alt="">
+
+            <!-- second item  -->
+            <h2>Improve your frontend skills by developing Projects</h2>
+
+            <!-- third item  -->
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et eius consequatur quam harum voluptatibus incidunt sit numquam omnis.</p>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(55, 50, 50);
+
+    /* conatiner ko grid bana rhe hai  */
+    display: grid; /*Ab mera container grid ban chuka hai*/
+    /* now we can use the properties of grid  */
+    padding: 4rem;
+
+    row-gap: 1rem; /*isse rows ke bich me gap ban jayegi*/
+}
+
+.item{
+    background-color: rgb(63, 63, 169);
+    border: 5px solid black;
+}

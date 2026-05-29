@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            background-color: bisque;
+            /* dono boxes ko left right me place karne ke liye container: ko flex banana parega; */
+            display: flex;
+            flex-direction: row;
+            width: 450px;
+            padding: 2px;
+            margin: 10px;
+        }
+
+        #boxLeft{
+            background-color: aquamarine;
+            border: 1px solid blue;
+            width: 47%;
+            margin: 3px;
+            padding: 2px;
+
+            /* left box ke andar items ek ke niche ek chahiye, then flex direction column karna padega, */
+            display: flex;
+            flex-direction: column;
+        }
+        #boxRight{
+            background-color: yellow;
+            border: 1px solid brown ;
+            width: 47%;
+            margin: 3px;
+            padding: 2px;
+        }
+        p{
+            border: 1px solid red;
+        }
+        img{
+            width: 170px;
+        }
+
+        @media (max-width: 640px) {
+            .container{
+                flex-direction: column; /*640px se kam hone par dono boxes ek ke neeche ek aajayenge*/
+                /* otherwise default configuration (640px ke upar jane par) me dono boxes left right me hi place honge */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- is container ke two children hai: boxLeft and boxRight, dono ko left right me place karna hai, 
+        to container ko flex banana padega, and flex direction row karna padega, tabhi dono boxes left right me place honge, otherwise by default flex direction row hota hai, to dono boxes left right me hi place honge, but agar hum flex direction column kar denge to dono boxes ek ke neeche ek place honge; -->
+        <div id = "boxLeft"> 
+            <!-- left wale box ke andar two text-->
+            <p>Text1</p>
+            <p>Text2</p>
+
+        </div>
+        <div id = "boxRight">
+            <img src="imageFile.png" alt="Image">
+        </div>
+    </div>
+</body>
+</html>

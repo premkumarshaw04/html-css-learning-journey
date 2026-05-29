@@ -1,0 +1,46 @@
+.box{
+    width: 400px;
+    height: 400px;
+    background-color: beige;
+    border: 2px solid black;
+
+    /* isse hamara content center me aa jayega. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Applying transitions */ 
+    /*Transformation ko smooth karne wala kaam transition ne kar diya*/
+    transition: all 3s linear 1s;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{ /*Pseudo class*/
+
+    /*box ko rotate karne ke liye transform property ka use kar rhe hain. */
+    /* transform: rotate(360deg); */
+
+    /* Now I want to scale  */
+    /*Assuming the default size is 1*/
+
+    /* transform: scale(0.5); || It will reduce the size to 50% of the original size. */
+    /* transform: rotate(-45deg);  *//*anticlockwise me rotate karne ke liye negative value deni hoti hai.*/
+
+    /* transform: skew(45deg); || It will skew the element by 45 degrees along the X-axis. */
+
+    /* Now I want to move the element from its original position. */
+    /* transform: translate(100px); X direction me 500px */
+    /* transform: translate(0, 100px); Y direction me 500px move kar jayega */
+
+    transform: translate(100px, 100px); /*X and Y direction me 500px move kar jayega, and diagonal movement banegi */
+}
+p{
+    font-size: 36px;
+}

@@ -1,0 +1,794 @@
+/* this is inter font  */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/*Some custom variables : Custom variables in CSS are user-defined variables declared using -- and accessed using var() to reuse values like colors and improve maintainability.*/
+:root { /*:root means they are available globally (whole website*/
+    --primary-color: #6366F1;
+    --accent-color: #3f83f8;
+    --text-color: #333333;
+    --link-color: #2563ab;
+    --background-color: #ffffff;
+    --light-gray: #f0f0f0;
+    --gray: #808080;
+    --dark-gray: #555;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /*Browser will try to use Inter font first, It must be installed or imported*/
+    font-family: 'Inter', sans-serif; /*sans-serif is the fallback font, Used if Inter is not available*/
+    text-decoration: none; /*removes underline from links*/
+}
+
+body{
+    height: 100vh; /*100% of the viewport height*/
+    text-align: center;
+    background-color: var(--background-color);
+    padding: 0.1rem;
+}
+
+.header_content{
+    max-width: 1280px;
+    margin: 0 auto;/*sets top and bottom margin to 0 and automatically adjusts left and right margin to center the element horizontally.*/
+    display: flex;
+    justify-content: space-between; /*distributes space between items in a flex container, with the first item at the start and the last item at the end.*/
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+    gap: 0.625rem; /*adds space between the logo text and the image*/
+}
+
+.logo-icon{
+    height: 5.875rem;/*these measurments are given by the designer*/
+    width: 1.938rem;
+}
+
+.logo-text{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.nav{
+    display: none; /*hides the navigation menu on smaller screens*/
+    gap: 1.5rem; /*adds space between navigation links*/
+}
+@media screen and (min-width:768px) {
+    .nav{
+        display: flex;/*shows the navigation menu and arranges items in a row*/
+    }
+}
+
+
+.nav-link{
+    color: #718096;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transform: color 0.1s; /*smooth transition effect when the color changes*/
+}
+
+/*jab bhi nav links ke upar hover kiya jayega, to uska color change hoga*/
+.nav-link:hover{
+    color: var(--link-color); /*changes color on hover*/
+}
+
+
+.contact-button{
+    display: none; /*hides the contact button on smaller screens*/
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);/*this is custom variables*/
+    color: var(--background-color);
+    transform: all 0.1s; /*smooth transition effect for all properties when they change*/
+    padding: 0.75rem 1rem;/*top bottom 0.75 and left right 1.5rem*/
+    font-size: 1rem;
+    font-weight: 600;/*makes the text semi-bold by increasing its thickness.*/
+}
+@media screen and (min-width:768px) {
+    .contact-button{
+        display: block;/*Makes the button visible and behave like a block element*/
+    }
+}
+
+.contact-button:hover{
+    background-color: #5254f8; /*changes background color on hover*/
+}
+
+.menu_button{
+    display: none; /*hides the menu button on larger screens*/
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--background-color);
+    font-size: 1rem;/*1rem is a CSS unit equal to the font size of the root (html) element, usually 16px by default.*/
+    font-weight: 600;
+    padding: 0.5rem 0.9rem;/*top bottom 0.5rem and left right 0.9rem*/
+
+}
+@media screen and (max-width:768px) {/*jab width 768px se choti hogi*/
+    .menu_button{
+        display: block; /*shows the menu button on smaller screens*/
+    }
+    
+}
+
+.menu_icon{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+/*--------Episode 33 Ends Here--------*/
+
+/*--------Episode 34: Creating the HERO Section--------*/
+
+.main_section{
+    max-width: 1280px;
+
+    /* hm by deafult ye chahte hai ki left content and right content ek dusre ke niche aaye  */
+    display: flex;
+    flex-direction: column; /*by default, flex items are arranged in a row. This property changes the direction to column, stacking items vertically.*/
+    
+    gap: 2rem;
+    padding: 0.6rem;
+    align-items: center;
+    margin: 0 auto; /*centers the main section horizontally by setting left and right margins to auto, while top and bottom margins are set to 0.*/
+}
+
+/*Left Container Styling starts here*/
+.content_left{
+    text-align: center;
+    animation: slideFromLeft 1s ease forwards; /*forwards: Keeps the final state after animation ends, Without this, element goes back to original position*/
+}
+
+/* ye left se slide hoke right ki taraf aayega  */
+@keyframes slideFromLeft {
+    0%{
+        opacity: 0; /*starting me to ye invisible hoga*/
+        transform: translateX(-100%);/* strting me iski position screen ke bahar hogi  */
+        
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0); /*use uski original position me rakh do*/
+    }
+}
+
+.section_lebel{
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.section_title{
+    font-size: 2.3rem;
+    padding: 1.1rem;
+    color: var(--text-color);
+}
+
+.section_description{
+    color: var(--gray);
+    font-size: 1.13rem;
+}
+
+.button_group{
+    /*dono buttons side by side placed hai*/
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    align-items: center; /*vertically centers the buttons within the button group*/
+    justify-content: center; /*horizontally centers the buttons within the button group*/
+}
+
+.start_button,
+.tour_button{
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);/*this is custom variables*/
+    color: var(--background-color);
+    transform: all 0.1s; /*smooth transition effect for all properties when they change*/
+    padding: 0.75rem 1rem;/*top bottom 0.75 and left right 1.5rem*/
+    font-size: 1rem;
+    font-weight: 600;/*makes the text semi-bold by increasing its thickness.*/
+
+}
+.tour_button{
+    background-color: var(--dark-gray);
+}
+
+.start_button:hover{
+    background-color: #5254f8; /*changes background color on hover*/
+}
+.tour_button:hover{
+    background-color: var(--gray); /*changes background color on hover*/
+}
+/*Left Container Styling Ends here*/
+
+/*Right Container Styling starts here*/
+.content_right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image_container{
+    border: none;
+    border-radius: 1.225rem;
+    overflow: hidden; /*prevents the image from overflowing the container and ensures that the rounded corners are applied correctly.*/
+    
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /*adds a subtle shadow effect to the image container, giving it a sense of depth and making it visually appealing.*/   
+    /* these values are provided by the designer, 0px is horizontal offset, 4px is vertical offset, 8px is blur radius, and rgba(0,0,0,0.1) is the color of the shadow with 10% opacity. */
+
+    height: 50vh; /*57% of the viewport height*/
+}
+.section_image{
+    /*image_container is the parent conatiner here*/
+    /*jo bhi parent conatiner ki height and width hogi, uske hisab se image ki height and width set ho jayegi*/
+    height: 100%;
+    width: 100%;
+}
+/*Right Container Styling ends here*/
+
+
+/*chote screen size ke liye hmne styling kar di hai, ab hme hme big screen size ke liye styling karni hai, jisme left content and right content side by side aayenge, iske liye media query ka use karenge*/
+/*jaise hi screen 768px se badi hoti hai, left content and right content side by side aayenge*/
+@media screen and (min-width:768px) {
+    .main_section{
+        flex-direction: row; /*side by side aayenge*/
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .content_left{
+        max-width: 50%; /*left content ki width 50% hogi*/
+        text-align: left; /*text left align hoga*/
+    }
+    .section_title{
+        padding-left: 0; /*left padding ko remove kar diya hai, kyunki ab text left align hai*/
+    }
+    .button_group{
+        justify-content: start;
+        padding-left: 0;
+    }
+    .section_lebel{
+        font-size: 0.9rem;
+    }
+    .section_title{
+        font-size: 3.8rem;
+    }
+    .image_container{
+        height: 67vh; /*70% of the viewport height*/
+
+    }
+    .section_description{
+        font-size: 1.1rem;
+        color: var(--gray);
+        width: 78%;
+    }
+}
+
+/* styling of Mini Hero Section */
+/*hm pehle choti screen ke hisab se styling add karenge then hm baad me
+media queries ka use karke large screen ke liye designs add kar denge */
+.company_container{
+    display: flex;
+    flex-direction: column; /*by default, flex items are arranged in a row. This property changes the direction to column, stacking items vertically.*/
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    animation: slideFromLeft 1s ease forwards; /*forwards: Keeps the final state after animation ends, Without this, element goes back to original position*/
+}
+
+.company_grid{
+    display: grid;
+    /*choti screen ke liye 2 columns ka grid banayenge, */
+    grid-template-columns: repeat(2, 1fr); /*creates a grid with 2 columns of equal width (1fr each)*/
+    gap: 3.6rem; /*adds space between grid items*/
+    padding: 1rem;
+    background-color: var(--light-gray);
+    border: none;
+    border-radius: 0.625rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.8rem 2.5rem; /*top bottom 1.8rem and left right 2.5rem*/
+}
+
+.company_logo{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gray);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.svg_image{
+    height: 1.56rem;
+}
+.logo_txt{
+font-size: 1rem;
+}
+
+/*now we have to style the mini hero section for larger screens, jisme 4 columns ka grid banayenge, iske liye media query ka use karenge */
+/* jaise hi min width 640px cross hoti hai, company grid me 4 columns ka grid ban jayega, iske liye media query ka use karenge */
+@media screen and (min-width:640px) {
+    .company_grid{
+        grid-template-columns: repeat(4, 1fr); /*creates a grid with 4 columns of equal width (1fr each)*/
+    }
+    .company_title{
+        font-size: 2.3rem;
+        font-weight: bold;
+    }
+}
+
+/*--------Episode 34 Ends here----------*/
+
+/*--------Episode 35 Starts here----------*/
+
+.feature_container{
+    background-color: var(--light-gray);
+    padding: 2.5rem 0; /*top bottom 2.5rem and left right 0*/
+    text-align: center;
+}
+
+.feature_content{
+    max-width: 880px;
+    margin: 0 auto; /*centers the feature content horizontally by setting left and right margins to auto, while top and bottom margins are set to 0.*/
+    padding: 0 2%; /*top bottom 0, left right 2% padding */
+}
+
+.main_info{
+    display: flex;
+    flex-direction: column; /*by default, flex items are arranged in a row. This property changes the direction to column, stacking items vertically.*/
+    gap: 1rem;
+}
+
+.main_title{
+    font-size: 2.2rem;
+    font-weight: bold;
+
+}
+
+.main_description{
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.feature_grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1.3rem;
+    row-gap: 2rem; /*adds space between rows in the grid*/
+    column-gap: 2rem; /*adds space between columns in the grid*/
+}
+
+.feature_card{
+    /* isme 3 cheze hai, or sab ek ke niche ek hai  */
+    display: flex;
+    flex-direction: column; /*by default, flex items are arranged in a row. This property changes the direction to column, stacking items vertically.*/
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(100, 100, 133);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+.icon_container{
+    /* sare icon ek whitw circle ke andar hai  */
+    background-color: var(--background-color);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%; /*makes the container circular by setting the border radius to 50% of its width and height.*/
+
+    /* now we have to center the svg icon inside the icon container, for that we will use flexbox properties */
+    display: flex;
+    justify-content: center; /*horizontally centers the svg icon within the icon container*/
+    align-items: center; /*vertically centers the svg icon within the icon container*/
+}
+
+.feture_svg{
+    height: 1.5rem;
+    width: 1.5rem;
+
+}
+
+.feature_info{
+    /* hme card ke andar title and description me gap rakhna hai  */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature_title{
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.feature_description{
+    color: white;
+}
+
+/* hme first card ke color ko chnage karna hai*/
+.feature_card:nth-child(1){ /*selects the first feature card using the nth-child selector*/
+    background-color: #4a90e2;
+}
+
+/* hme second card ke color ko chnage karna hai*/
+.feature_card:nth-child(2){ /*selects the second feature card using the nth-child selector*/
+    background-color: #ff6289;
+}
+
+/* hme third card ke color ko chnage karna hai*/
+.feature_card:nth-child(3){ /*selects the third feature card using the nth-child selector*/
+    background-color: #fcbf58;
+}
+
+/* hme fourth card ke color ko chnage karna hai*/
+.feature_card:nth-child(4){ /*selects the fourth feature card using the nth-child selector*/
+    background-color: #4cbfc3;
+}
+
+/* hme fifth card ke color ko chnage karna hai*/
+.feature_card:nth-child(5){ /*selects the fifth feature card using the nth-child selector*/
+    background-color: #77b05d;
+}
+
+/* hme sixth card ke color ko chnage karna hai*/
+.feature_card:nth-child(6){ /*selects the sixth feature card using the nth-child selector*/
+    background-color: #7d78b1;
+}
+
+/* jaise bhi screen size 768px se kam hoti hai, then feature grid me sare card ek ke niche ek(single column me) aa jayenge, iske liye media query ka use karenge */
+@media screen and (max-width:768px) {
+    .feature_grid{
+        grid-template-columns: repeat(1, 1fr); /*creates a grid with 1 column of equal width (1fr)*/
+    }
+    
+}
+
+
+/*--------Episode 35 Ends here----------*/
+
+
+
+/*--------Episode 36 Starts here----------*/
+
+.testimonial_container{
+    background-color: var(--background-color);
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.testimonial_content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.testimonial_title{
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+
+.testimonial_grid{
+    /* isme 3 columns honge  */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*creates a responsive grid that automatically adjusts the number of columns based on the available space. Each column will have a minimum width of 250px and will expand to fill the remaining space (1fr)*/
+    grid-gap: 2rem; /*adds space between grid items*/
+}
+
+.testimonial_card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(171, 163, 163);
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.2rem;
+    gap: 1rem;
+
+    /*It is just a declaration*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*adds a smooth transition effect for transform and box-shadow properties when they change*/
+}
+.testimonial_card:hover{
+    transform: scale(1.05);;
+    box-shadow: 0 4px 8px rbga(0,0,0,0.2);
+    border: 1px solid blue;
+}
+
+.testimonial_text{
+    color: #555;
+    font-size: 0.875rem;
+
+}
+
+.testimonial_avatar img{ /*selects the img element inside the testimonial avatar class*/
+    height: 5rem;
+    width: 5rem;
+    
+}
+
+
+.testimonial_name{
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.testimonial_description{
+    font-size: 0.875rem;
+    color: #777;
+}
+
+/*--------Episode 36 Ends here----------*/
+
+/* Episode 37: Creating a NEWSLETTER Section */
+
+.newsletter_container{
+    background-color: var(--background-color);
+    
+    max-width: 1280px;
+    height: 40vh;
+    margin: 0 auto; /*isse content centre me place ho jayega*/
+
+}
+
+.newletter_content{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--light-gray);
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.newsLeft{
+    height: 100%;
+    width: 50%;
+    position: relative;
+
+    /* these are the default properties  */
+    display: none; /*jab screen size 640px se kam hogi to ye box nhi dikhega*/
+}
+
+.newsLeft img{
+    /* newsLeft ke andar jo image hai uski dimmension kya hogi */
+    position: absolute;
+    inset: 0;
+    /*positions an element absolutely and stretches it to fill the entire parent container by setting top, right, bottom, and left to 0.*/
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.newsRight{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    width: 98%;
+}
+
+.newsInfo{
+    padding: 0 3rem;/*Top down se o and left right se 3rem*/
+}
+
+.news_title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.news_description{
+    text-align: left;
+    color: #777;
+}
+
+.news_form{
+    padding: 0 3rem;
+    display: flex;
+    flex-wrap: wrap;/*allows flex items to move to the next line when there is not enough space in the flex container.*/
+    margin-bottom: 1rem;
+    gap: 0.6rem;
+}
+
+.news_email{
+    background-color: var(--background-color);
+    color: #333;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+}
+
+.news_email:focus{
+    border-color: #2563ab;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.news_send_button{
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+}
+
+.news_send_button:hover{
+    background-color: var(--link-color);
+}
+
+.privacy_policy{
+    font-size: 0.76rem;
+    padding: 0 3rem;
+    color: #777;
+}
+
+.news_link{
+    text-decoration: underline;
+    color: #2563ab;
+}
+
+/* adding responsive behaviour  */
+
+/* jab screen 640px se jyada hogi to kya properties add karni hogi  */
+@media screen and (min-width:640px){
+    .newsLeft{
+        display: block;
+        width: 50%;
+    }
+    .newsRight{
+        width:50%;
+    }
+    .newsletter_container{
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width:640px){
+    .news_title{
+        font-size: 2.5rem;
+    }
+}
+
+/* Episode 37 Ends here */
+
+
+/* Episode 38 Starts here */
+.footer-container{
+    background-color: var(--background-color);
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+}
+
+.footer{
+    max-width: 1280px;
+    padding:1.2rem 2.4rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+}
+
+.footer-top{
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.65rem;
+}
+
+.logo-svg{
+    width: 2rem;
+    height: 6rem;
+}
+
+.comp-logo{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: -1.9rem;
+}
+.logo-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.28rem;
+    font-weight: bold;
+    color: black;
+}
+.social-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.filler-text{
+    font-size: 1rem;
+    color: #777;
+}
+.social_media_icons{
+    display: flex;
+    gap: 0.8rem;
+}
+
+/* Styling the footer grid */
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 58%;
+    grid-gap: 5.67rem;
+    padding-top: 2rem;
+}
+
+.footer-grid-heading{
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+ul{
+    list-style-type: none;/*isse dots hat jayenge*/
+}
+
+.footer-links-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.footer-link{
+    color: #777;
+    font-size: 0.875rem;
+}
+
+.footer-grid-heading{
+    margin-bottom: 1.65rem;
+}
+
+/*Styling the footer copyright section*/
+.footer-copyright{
+    color: var(--gray);
+    font-size: 0.75rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    padding-top: 1.15rem;
+    border-top: 1px solid #E5E7EB;
+}
+
+/* jaise hi resolution 1080px ke niche aayegi, footer top and footer grid ek ke niche ek aa jayenge  */
+@media screen and (max-width:1080px) {
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-top{
+        padding-left: 10rem;
+    }
+    .footer-grid{
+        align-self: center;/*centers a specific flex item on the cross axis.*/
+        justify-content: space-evenly;/*distributes flex items with equal space around them along the main axis.*/
+    }
+}
+
+/* jaise hi resolution 1080px ke niche aayegi,tab 2 columns ban jayenge */
+@media screen and (max-width:850px) {
+    .footer-top{
+        padding-left: 1rem;
+    }
+    .footer-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* Episode 38 Ends here */

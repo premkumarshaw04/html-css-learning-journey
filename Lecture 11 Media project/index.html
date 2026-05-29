@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="imageFile.png" alt="Logo image" height="100px" loading="lazy">
+    <br/>
+
+    <!-- adding audio first method -->
+    <!-- <audio src="audioFile.mp3" controls></audio> -->
+
+    <!-- second method of audio adding -->
+    <audio controls> <!--controls ko keyword ya attribute keh sakte hai-->
+        <source src="audioFile.mp3" type="audio/mp3">
+    </audio>
+    <br/>
+    
+    <!-- first way of adding video  -->
+    <!-- <video src="videoFile.MP4" height="500px" controls></video> -->
+
+    <!-- Second way of adding video  -->
+    <video controls height="500px">
+        <source src="videoFile.MP4" type="video/mp4" >
+    </video>
+    <br/>
+    
+    <!-- adding external document using iframe -->
+    <!-- ek document ke andar koi another document use present karne ke liye iframe tag ka use karte hai  
+    jab koi external document ko refer karna hota hai ya add karna hota hai website me to iframe ka use karte hai-->
+    <iframe src="../Lecture 10/projectOne.html" width="800px" height="720px"></iframe>
+    <br/>
+    
+    <!-- embeding youTube video in website using iframe -->
+    <!-- <iframe src="https://www.youtube.com/watch?v=0oe7CF-TY_U"></iframe>       .....youtube url ko embed karne ke formate hai, we have to remove (watch?v=) and instead of this we have to add (embed/) -->
+    <iframe src="https://www.youtube.com/embed/0oe7CF-TY_U"></iframe> 
+
+
+    <!-- 
+        modern tags:
+        header tag for header section
+        nav tag for navigation links/bar
+        footer tag for footer section
+        main tag for main section (jaha par entire body hai apke pure page ki)
+        aside tag for side bars
+
+        these tags provide a better structure in our websites ,so using these tags is a good practice
+     -->
+</body>
+</html>

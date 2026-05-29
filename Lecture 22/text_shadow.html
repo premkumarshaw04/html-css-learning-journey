@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            /*root ke andar variables ko define karne se ho har jagah se accessible ho jati hai.*/
+            --primary-color: brown; /* CSS variable declaration */
+            --custom-width: 330px; 
+        }
+        .container{
+            background-color: beige;
+            border: 2px solid black;
+            height: 650px;
+            display: flex;
+            justify-content: center; /* box ko horizontally center karne ke liye */
+            align-items: center; /* box ko vertically center karne ke liye */   
+        }
+
+        .box{
+            
+            background-color: aquamarine;
+            width: var(--custom-width); /* CSS variable usage */
+            height: 330px;
+            border: 1px solid var(--primary-color);
+            margin: 5px;
+            padding: 5px;
+
+            /* text shadow using color  */
+        }
+        #head1{
+            /* 1st syntax: */
+            /* text-shadow: 2px 3px 1px white; text-shadow: xoffset yoffset blur color; */
+
+            /* 2nd syntax: */
+            /* text-shadow:yellow 12px 13px 2px; text-shadow: color xoffset yoffset blur; */
+            
+            /* 3rd syntax: */
+            /* text-shadow: white 12px 13px; */
+
+            /*4th syntax: */
+            /* text-shadow: 12px 13px;    by default shadow color is black and blur is 0px */
+
+            /* 5th syntax:  */
+            /*creating multiple shadows for text */
+            text-shadow: 2px 3px 1px red, 4px 5px 2px yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- Shadows are of two types: 1. Box Shadow 2. Text Shadow -->
+    <div class="container">
+
+        <div class="box">
+            <img src="imageFile.png" alt="Image">
+            <h2 id="head1">Welcome to CodeHelp</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae exercitationem quas quod, adipisci sapiente officiis provident. Quasi error hic beatae, minima quod cum cupiditate nesciunt nulla recusandae placeat, ipsam repellat?
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jab bhi hm head tag ke andar style tag ka use karke properties define karte hai , 
+    to is way of styling ko hm Internal CSS kehte hai -->
+    
+    <!-- Internal CSS -->
+    <style>
+        /* h1 tag ke liye text color green kar diya jaye */
+        h1{
+            color: green;
+        }
+
+        /* this prperty will not bw applied , jab bhi competion hoga, jab bhi style tag(Internal css) ke andar hmne koi property mention kar rakhi hai
+        and Inline css ke andar bhi agar hmne wahi same property mention kar rakhi hai , to hmes wahi property apply hogi jo inline css ke andar applied hai
+        */
+        p{
+            background-color: blueviolet !important;
+        }
+        /* but we can cancel this rule by marking internal css as !important  */
+    </style>
+</head>
+<body>
+    <h1>Welcome to Code Help</h1>
+
+    <p style="background-color: yellow;"><!--this is called inline css-->
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores libero ratione deserunt reprehenderit labore commodi, aspernatur numquam eaque error fugiat.
+    </p>
+    
+</body>
+</html>

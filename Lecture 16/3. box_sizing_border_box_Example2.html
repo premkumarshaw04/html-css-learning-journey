@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .first_div{
+            width: 300px;
+            height: 100px;
+            border: 1px solid red;
+            /* here we have not applied the padding */
+        }
+
+        .second_div{
+            width: 300px;
+            height: 100px;
+            border: 1px solid red;
+            padding: 100px;
+            /* here we have applied the padding, so this second div should be greater in size but still both the 
+            div will be same dimmension beacuse we have applied (box sizing border box) property
+            on all the elements using universal selector*/
+
+            /* beacuse of padding the content of second div would be shirnked */
+        }
+    </style>
+</head>
+<body>
+    <div class="first_div">
+        Hi my name is Prem.
+    </div>
+
+    <div class="second_div">
+        Hi my name is Prem.
+    </div>
+</body>
+</html>

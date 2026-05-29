@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .firstPara{
+            background-color: blanchedalmond;
+            border: solid black 3px;
+            border-radius: 5px;
+            width: 350px;
+
+            /* The layer which exists between Content and Border is called padding  */
+            /* padding: 50px;
+            margin: 90px; */
+
+            /* padding-left: 10px;
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 40px; */
+            /* Short hand notation of above 4 lines to apply padding  */
+            padding: 15px 25px 35px 45px ;/*order => top right bottom left */
+        }
+
+        .secondPara{
+            background-color: beige;
+            border: solid black 3px;
+            border-radius: 5px;
+            width: 350px;
+
+            /* another way applying by axis wise padding */
+            padding: 20px 80px;
+            /* y axis => top and bottom //20px
+            x axis => left and right  /80px   */ 
+        }
+
+        .thirdPara{
+            background-color: yellow;
+            border: solid black 3px;
+            border-radius: 5px;
+            width: 350px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- jab ap koi bhi content render karoge apne view port par, to apka browser apke content ko chahe wo text ho, chahe wo image ho, kuch bhi ho
+     apka browser us content ko ek rectangle ke form me hi render karega, this whole concept is represented by box model-->
+
+    <!-- whenever we are designing our page or setting a layout of a page, then we have to keep in mind about the Box Model-->
+
+    <!-- Box Model only says that, any content which is run in the webpage that will be render(Display) in the form of rectangle always. -->
+
+    
+    <p class="firstPara">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis nam eligendi quod esse mollitia officia, ducimus illum. Corporis, nisi quis aut ipsam odit aperiam atque ipsa quo autem repudiandae hic. Repellat similique distinctio atque. Iste dignissimos amet commodi modi.
+    </p>
+
+    <p class="secondPara">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nihil architecto cum delectus, eveniet fugiat expedita consequuntur tenetur, qui earum quos commodi incidunt libero id voluptas quasi inventore in quisquam corporis. Error asperiores eum fugiat enim praesentium nulla consequuntur odio veniam beatae, magnam, nihil natus. Magnam, vero molestiae! Modi, eligendi!
+    </p>
+
+    <p class="thirdPara">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit ducimus, nostrum quisquam eum repellat esse in, eligendi aliquid quo quis facilis voluptas molestiae omnis dolorem.
+    </p>
+
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            /* bare wale container ko flex me convert karna hai, jiske iske andar wale boxes flex items ban jaye; */
+            
+            background-color: beige;
+            border: 5px solid black;
+            margin: 2px;
+            padding: 2px;
+            height: 1200px;
+            
+            display: flex;/* display:flex;  isse boxes ek line me aa jayenge  */
+            /*by default flex-direction: row hota hai, jisme left se right me boxes arrange hote hain */
+            flex-direction: row; /*here flex direction is row, then main axis is horizontal and cross axis is vertical */
+            
+            /* flex-wrap: wrap; */
+            justify-content: start;
+            align-items: start;
+
+            align-content: start;/*ab jab boxes wrap honge to wo container ke starting me hi align honge dono axis me , all boxes will stick together */
+            /* align-content: end;ab jab boxes wrap honge to wo container ke end me hi align honge dono axis me , all boxes will stick together */
+            /* align-content: center; ab jab boxes wrap honge to wo container ke center me hi align honge dono axis me , all boxes will stick together */
+            /* align-content: stretch; ab jab boxes wrap honge to wo container ke height ke*/
+        }
+
+        /* . is used for class */
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid brown;
+            margin: 2px;
+            padding: 2px;
+        }
+
+        /* # is used for id  */
+        #box1{ 
+            background-color: aqua;
+            order: 500;/* default order is 0, jiska order zyada hoga wo last me jayega */
+            /*by this property we can change the order of flex items */
+
+            /* flex-shrink: 4;default flex-shrink is 1, jiska flex-shrink zyada hoga wo kam space lega container me, agar space kam hoga to jiska flex-shrink zyada hoga wo pehle shrink hoga container me  */
+        }
+        #box2{
+            background-color: blue;
+
+        }
+        #box3{
+            background-color: orange;
+            /* flex-grow: 5;default flex-grow is 0, jiska flex-grow zyada hoga wo zyada space lega container me, agar space zyada hoga to jiska flex-grow zyada hoga wo pehle grow hoga container me  */
+        }
+        #box4{
+            background-color: brown;
+            order: -1;
+            flex-basis: 500px; /*by default flex-basis is auto, jiska flex-basis zyada hoga wo zyada space lega container me */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box4">Box 4</div>
+    </div>
+</body>
+</html>

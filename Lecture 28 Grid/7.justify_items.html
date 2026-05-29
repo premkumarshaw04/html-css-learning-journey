@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Second Example</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color: rgb(81, 67, 67);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 200px);
+            gap: 0.4rem;
+            padding: 4rem;
+            border: 2px solid white;
+
+            /* ye directly items pe apply hoti hai  */
+            /* justify-items: end; */
+            /* justify-items: center; */ 
+            /* justify-items: stretch; */
+
+            /* align-items: center;
+            align-items: end; */
+            /* align-items: start; */
+            /* align-items: stretch; */
+
+            /* we have a property, jisse hm directly horizontally and vertically dono ke according place kar payenge */
+            place-items: center;
+        }
+
+        .item{
+            height: 50px;
+            width: 100px;
+            background-color: rgb(57, 191, 53);
+            border: 5px solid rgb(238, 244, 246);
+
+        }   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+    </div>
+</body>
+</html>
